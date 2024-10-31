@@ -56,12 +56,12 @@ impl TargetDescription {
     /// # Arguments
     ///
     /// * core_type - CPU type
-    /// * isa - CPU instruciton set
+    /// * isa - CPU instruction set
     pub fn new(core_type: CoreType, isa: InstructionSet) -> Self {
         let arch = match core_type {
             CoreType::Armv6m => "armv6-m",
             CoreType::Armv7a => "armv7",
-            CoreType::Armv7m => "armv7",
+            CoreType::Armv7m => "armv7-m",
             CoreType::Armv7em => "armv7e-m",
             CoreType::Armv8a => match isa {
                 InstructionSet::A64 => "aarch64",
